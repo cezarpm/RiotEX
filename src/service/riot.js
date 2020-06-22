@@ -1,4 +1,4 @@
-const axios = require('../config/axios-config');
+const axios = require('../configs/axios-config');
 
 const RiotService = {
   async getSummonnerIDByName(name) {
