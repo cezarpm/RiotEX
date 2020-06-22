@@ -6,6 +6,7 @@ const MatchController = require("./controllers/matchController");
 
 router.get("/summoner/:name", SummonerController.getSummonnerByName);
 
-router.get("/match/:name", MatchController.getMatchHistoryByName);
+router.get("/match/matchlist/:name", MatchController.getMatchHistoryByName);
+router.get("/match/:matchId", MatchController.getMatchBymatchID);
 
 module.exports = router;

@@ -10,6 +10,13 @@ const RiotService = {
       .then((data) => data);
     return data;
   },
+  async getMatchBymatchID(matchId) {
+    const data = axios
+      .get(`/lol/match/v4/matches/${matchId}`)
+      .then((res) => res.data)
+      .then((data) => data);
+    return data;
+  },
 };
 
 module.exports = RiotService;
