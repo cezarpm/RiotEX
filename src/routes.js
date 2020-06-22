@@ -1,9 +1,11 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
 
-const SummonerController = require('./controllers/summonerController');
+const SummonerController = require("./controllers/summonerController");
+const MatchController = require("./controllers/matchController");
 
-router.get('/summoner/:name', SummonerController.getSummonnerByName);
-router.get('/summoner/matchhistory/:name', SummonerController.getMatchHistoryByName);
+router.get("/summoner/:name", SummonerController.getSummonnerByName);
+
+router.get("/match/:name", MatchController.getMatchHistoryByName);
 
 module.exports = router;
