@@ -1,13 +1,9 @@
-const axios = require("../configs/axios-config");
+const riotService = require("./riot")
 
-const RiotService = {
+const RiotSummoner = {
   async getSummonnerByName(name) {
-    const data = axios
-      .get(`lol/summoner/v4/summoners/by-name/${name}`)
-      .then((res) => res.data)
-      .then((data) => data);
-    return data;
+    return await riotService.get(`lol/summoner/v4/summoners/by-name/${name}`)
   },
 };
 
-module.exports = RiotService;
+module.exports = RiotSummoner;
