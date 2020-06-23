@@ -6,11 +6,6 @@ const summonerController = {
     const invocador = await riot.getSummonnerByName(name);
     res.send(invocador);
   },
-  async getMatchHistoryByName(req, res) {
-    const { name } = req.params;
-    const matchHistory = await riot.getMatchHistoryByName(name);
-    res.send(matchHistory);
-  },
 };
 
 module.exports = summonerController;
