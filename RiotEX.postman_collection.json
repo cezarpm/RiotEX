@@ -1,0 +1,83 @@
+{
+	"info": {
+		"_postman_id": "067b8fb5-f2e5-45e2-a819-f4e910961cea",
+		"name": "RiotEX",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Match",
+			"item": [
+				{
+					"name": "match/matchlist/:name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/match/matchlist/aspnetcore",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"match",
+								"matchlist",
+								"aspnetcore"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "match/:matchId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/match/1964974622",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"match",
+								"1964974622"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Summoner",
+			"item": [
+				{
+					"name": "summoner/:name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/summoner/aspnetcore",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"summoner",
+								"aspnetcore"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

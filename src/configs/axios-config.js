@@ -1,11 +1,10 @@
-require('dotenv').config();
-const axios = require('axios');
+import { create } from 'axios';
 
 const config = {
   headers: { 'X-Riot-Token': process.env.API_KEY },
   baseURL: process.env.BASE_URL,
 };
 
-const axiosInstance = axios.create(config);
+const axiosInstance = create(config);
 
-module.exports = axiosInstance;
+export default axiosInstance;

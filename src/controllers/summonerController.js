@@ -1,11 +1,11 @@
-const riot = require("../services/riotSummoner");
+import { getSummonnerByName } from '../services/riotSummoner';
 
-const summonerController = {
+const SummonerController = {
   async getSummonnerByName(req, res) {
     const { name } = req.params;
-    const invocador = await riot.getSummonnerByName(name);
+    const invocador = await getSummonnerByName(name);
     res.send(invocador);
   },
 };
 
-module.exports = summonerController;
+export default SummonerController;

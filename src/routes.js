@@ -1,12 +1,12 @@
-const express = require("express");
-const router = express.Router();
+import { Router } from 'express';
+import SummonerController from './controllers/summonerController';
+import MatchController from './controllers/matchController';
 
-const SummonerController = require("./controllers/summonerController");
-const MatchController = require("./controllers/matchController");
+const router = Router();
 
-router.get("/summoner/:name", SummonerController.getSummonnerByName);
+router.get('/summoner/:name', SummonerController.getSummonnerByName);
 
-router.get("/match/matchlist/:name", MatchController.getMatchHistoryByName);
-router.get("/match/:matchId", MatchController.getMatchBymatchID);
+router.get('/match/matchlist/:name', MatchController.getMatchHistoryByName);
+router.get('/match/:matchId', MatchController.getMatchBymatchID);
 
-module.exports = router;
+export default router;
