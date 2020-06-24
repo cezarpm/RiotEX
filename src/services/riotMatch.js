@@ -1,14 +1,9 @@
-const riotSummoner = require("./riotSummoner");
-const riotService = require('./riot')
+import { getSummonnerByName } from './riotSummoner';
+import riotService from './riot';
 
-const RiotMatch = {
-  async getMatchHistoryByName(name) {
-    const { accountId } = await riotSummoner.getSummonnerByName(name);
-    return await riotService.get(`/lol/match/v4/matchlists/by-account/${accountId}`)
-  },
-  async getMatchBymatchID(matchId) {
-     return await riotService.get(`/lol/match/v4/matches/${matchId}`)
-  },
+export const getMatchHistoryByName = async (name) => {
+  const { accountId } = await getSummonnerByName(name);
+  return riotService.get(`/lol/match/v4/matchlists/by-account/${accountId}`);
 };
 
-module.exports = RiotMatch;
+export const getMatchBymatchID = async (matchId) => riotService.get(`/lol/match/v4/matches/${matchId}`);

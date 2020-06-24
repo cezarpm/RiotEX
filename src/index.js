@@ -1,5 +1,9 @@
-const app = require("./configs/custom-express");
+import 'dotenv/config';
 
-app.listen(8000, () => {
-  console.log("Servidor rodando na porta 8000");
+import app from './configs/custom-express';
+
+const port = process.env.PORT || 8000;
+
+app.listen(port, () => {
+  console.log(`Servidor rodando na porta ${port}`);
 });

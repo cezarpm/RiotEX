@@ -1,16 +1,16 @@
-const riot = require("../services/riotMatch");
+import { getMatchBymatchID, getMatchHistoryByName } from '../services/riotMatch';
 
 const MatchController = {
   async getMatchHistoryByName(req, res) {
     const { name } = req.params;
-    const matchHistory = await riot.getMatchHistoryByName(name);
+    const matchHistory = await getMatchHistoryByName(name);
     res.send(matchHistory);
   },
   async getMatchBymatchID(req, res) {
     const { matchId } = req.params;
-    const match = await riot.getMatchBymatchID(matchId);
+    const match = await getMatchBymatchID(matchId);
     res.send(match);
   },
 };
 
-module.exports = MatchController;
+export default MatchController;
