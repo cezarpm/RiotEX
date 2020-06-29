@@ -7,12 +7,15 @@
     "axios": "^0.19.2",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "supertest": "^4.0.2"
   },
   "devDependencies": {
+    "@sucrase/jest-plugin": "^2.0.0",
     "eslint": "^7.3.1",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "^2.21.2",
+    "jest": "^26.1.0",
     "husky": "^4.2.5",
     "nodemon": "^2.0.4",
     "sucrase": "^3.15.0"
@@ -21,6 +24,8 @@
     "start": "node dist/index.js",
     "start:dev": "nodemon src/index.js",
     "lint": "eslint src/**/*.js",
+    "test": "jest --testTimeout=15000 --config ./jest.config.js",
+    "test:e2e": "jest --testTimeout=15000 --config ./jest.config.e2e.js",
     "build": "sucrase src/ -d dist --transforms imports"
   },
   "repository": {
