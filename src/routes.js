@@ -1,6 +1,7 @@
 import { Router } from 'express';
 import SummonerController from './controllers/summoner.controller';
 import MatchController from './controllers/match.controller';
+import StatusController from './controllers/status.controller';
 
 const router = Router();
 
@@ -10,6 +11,8 @@ router.param('name', (req, res, next) => {
   req.params.name = encodeName;
   next();
 });
+
+router.get('/', StatusController.getStatus);
 
 router.get('/summoner/:name', SummonerController.getSummonnerByName);
 
