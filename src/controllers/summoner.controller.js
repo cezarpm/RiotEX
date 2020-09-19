@@ -1,4 +1,4 @@
-import { getSummonnerByName } from '../services/riotSummoner';
+import { getSummonnerByName } from '../services/riotSummoner.service';
 
 const SummonerController = {
   async getSummonnerByName(req, res) {

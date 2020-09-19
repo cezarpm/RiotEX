@@ -1,4 +1,4 @@
-import { getMatchBymatchID, getMatchHistoryByName } from '../services/riotMatch';
+import { getMatchBymatchID, getMatchHistoryByName } from '../services/riotMatch.service';
 
 const MatchController = {
   async getMatchHistoryByName(req, res) {

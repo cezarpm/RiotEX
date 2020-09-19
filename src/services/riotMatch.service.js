@@ -1,5 +1,5 @@
-import { getSummonnerByName } from './riotSummoner';
-import riotService from './riot';
+import { getSummonnerByName } from './riotSummoner.service';
+import riotService from './riot.service';
 
 export const getMatchHistoryByName = async (name) => {
   const { accountId } = await getSummonnerByName(name);

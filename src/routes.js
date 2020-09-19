@@ -1,6 +1,6 @@
 import { Router } from 'express';
-import SummonerController from './controllers/summonerController';
-import MatchController from './controllers/matchController';
+import SummonerController from './controllers/summoner.controller';
+import MatchController from './controllers/match.controller';
 
 const router = Router();
 
