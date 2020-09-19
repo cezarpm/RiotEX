@@ -12,6 +12,9 @@
     "sourceType": "module",
     "babelOptions": {
       "configFile": "./.babelrc"
+    },
+    "ecmaFeatures": {
+      "legacyDecorators": true
     }
   },
   "plugins": [
@@ -19,7 +22,10 @@
   ],
   "rules": {
     "import/prefer-default-export": "off",
-    "no-console": "off"
+    "no-console": "off",
+    "object-curly-newline": "off",
+    "no-unused-vars": "off",
+    "import/no-cycle": "off"
   },
   "parser": "babel-eslint"
 }
