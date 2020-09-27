@@ -25,7 +25,8 @@
     "no-console": "off",
     "object-curly-newline": "off",
     "no-unused-vars": "off",
-    "import/no-cycle": "off"
+    "import/no-cycle": "off",
+    "import/extensions": "off"
   },
   "parser": "babel-eslint"
 }

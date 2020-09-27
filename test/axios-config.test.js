@@ -1,4 +1,4 @@
-import env from '../env';
+import env from '../env.js';
 
 describe('Testes da configuração do axios', () => {
   it('Import do axiosInstance retorna instancia do axios configurada', async () => {
