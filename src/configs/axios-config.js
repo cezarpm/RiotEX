@@ -1,8 +1,9 @@
 import { create } from 'axios';
+import env from '../../env';
 
 const config = {
-  headers: { 'X-Riot-Token': process.env.API_KEY },
-  baseURL: process.env.BASE_URL,
+  headers: { 'X-Riot-Token': env.API_KEY || process.env.API_KEY },
+  baseURL: env.BASE_URL || process.env.BASE_URL,
 };
 
 const axiosInstance = create(config);

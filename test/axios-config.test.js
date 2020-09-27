@@ -6,5 +6,6 @@ describe('Testes da configuração do axios', () => {
     expect(axios.post).toBeDefined();
     expect(axios.defaults.baseURL).toEqual(process.env.BASE_URL);
     expect(axios.defaults.headers['X-Riot-Token']).toEqual(process.env.API_KEY);
+    expect(axios.defaults.headers['X-Riot-Token']).not.toBe('undefined');
   });
 });
