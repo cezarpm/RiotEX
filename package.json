@@ -39,7 +39,6 @@
     "start:dev": "cd src && NODE_ENV=local ../node_modules/.bin/nodemon --exec ../node_modules/.bin/babel-node index",
     "lint": "eslint src/**/*.js",
     "test": "jest --testTimeout=15000 --config ./jest.config.js",
-    "test:e2e": "jest --testTimeout=15000 --config ./jest.config.e2e.js",
     "build": "rm -rf ./dist && ./node_modules/.bin/babel src --out-dir dist --copy-files"
   },
   "repository": {
