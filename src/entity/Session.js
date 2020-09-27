@@ -12,7 +12,7 @@ export class Session {
   token = undefined;
 
   @Column('datetime', { default: () => 'CURRENT_TIMESTAMP' })
-  creationDate = undefined;
+  createdDate = undefined;
 
   @ManyToOne((type) => User, { eager: true, onDelete: 'CASCADE' })
   user = undefined;
